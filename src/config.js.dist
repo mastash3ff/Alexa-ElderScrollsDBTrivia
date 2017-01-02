@@ -1,0 +1,5 @@
+#sample config file
+
+var config = {};
+
+config.appId = ""; 
