@@ -16,6 +16,12 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
+        run: pip install -r src/requirements.txt pytest
+
+      - name: Run tests
+        run: PYTHONPATH=src pytest tests/ -v
+
+      - name: Build deployment package
         run: pip install -r src/requirements.txt -t package/
 
       - name: Build zip
